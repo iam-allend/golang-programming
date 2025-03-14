@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Golang</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Pengguna</h1>
+        <a href="/create" class="btn">Tambah Pengguna</a>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Users}}
+                <tr>
+                    <td>{{.ID}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.Email}}</td>
+                    <td>
+                        <a href="/view?id={{.ID}}" class="btn view">Lihat</a>
+                        <a href="/edit?id={{.ID}}" class="btn edit">Edit</a>
+                        <a href="/delete?id={{.ID}}" class="btn delete">Hapus</a>
+                    </td>
+                </tr>
+                {{else}}
+                <tr>
+                    <td colspan="4">Tidak ada data</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

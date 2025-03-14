@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pengguna</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detail Pengguna</h1>
+        
+        <div class="view-container">
+            <p><strong>ID:</strong> {{.ID}}</p>
+            <p><strong>Nama:</strong> {{.Name}}</p>
+            <p><strong>Email:</strong> {{.Email}}</p>
+        </div>
+        
+        <div class="btn-group">
+            <a href="/edit?id={{.ID}}" class="btn edit">Edit</a>
+            <a href="/" class="btn back">Kembali</a>
+        </div>
+    </div>
+</body>
+</html>
