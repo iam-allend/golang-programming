@@ -38,7 +38,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`) VALUES
-(2, 'quack', 'customer@gmail.com');
+(1, 'Customer 1', 'customer@gmail.com');
 
 --
 -- Indexes for dumped tables
